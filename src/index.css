@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
+@layer components {
     .btn{
         @apply bg-primary w-fit text-white px-6 py-2 rounded-lg font-semibold hover:bg-secondary shadow-[0px_10px_8px_-7px_#ffd978] hover:shadow-[0px_10px_8px_-7px_#69a79c] transition-all duration-300
     }

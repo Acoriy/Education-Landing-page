@@ -22,7 +22,7 @@ const Navebar = () => {
         headerRef.current.style.background = "rgba(247, 247, 247, 0.8)"
         headerRef.current.style.padding = "8px 18px";
         headerRef.current.style.boxShadow = "0px 3px 10px rgb(0,0,0,0.24)";
-        headerRef.current.style.borderRadius = "30px"
+        headerRef.current.style.borderRadius = "30px";
 
      }else{
       headerRef.current.style.background = "transparet";
@@ -45,7 +45,7 @@ const Navebar = () => {
            }}
          className="container flex flex-row items-center justify-between pt-[30px]">
           {/* Logo section */}
-          <div className="flex items-center cursor-pointer ">
+          <div className="flex items-center cursor-pointer ml-3 md:ml-0">
             <h1 className="text-2xl font-semibold"><Link to="home" spy={true} smooth={true} duration={500}>SOCORIN</Link></h1>
           </div>
           {/* Navebar Section */}
@@ -53,24 +53,24 @@ const Navebar = () => {
            
               <Link to="home" spy={true} smooth={true} duration={500} className="nav-link group hidden lg:block">
                  Home
-                 <span className="hover-link"></span>
+                 <span className="hover-spane-link"></span>
               </Link>
             
             <Link to="services" spy={true} smooth={true} duration={500} className="nav-link group hidden md:block">
               Services
-              <span className="hover-link"></span>
+              <span className="hover-spane-link"></span>
             </Link>
             <Link to="education" spy={true} smooth={true} duration={500} className="nav-link group hidden md:block">
               Education
-              <span className="hover-link"></span>
+              <span className="hover-spane-link"></span>
             </Link>
             <Link to="subscribe" spy={true} smooth={true} duration={500} className="nav-link group hidden md:block">
               Subscribe
-              <span className="hover-link"></span>
+              <span className="hover-spane-link"></span>
             </Link>
             <Link to="community" spy={true} smooth={true} duration={500} className="nav-link group hidden md:block">
               Join Community
-              <span className="hover-link"></span>
+              <span className="hover-spane-link"></span>
             </Link>
             <button className="btn hidden md:block">
               <Link to="community" spy={true} smooth={true} duration={500}>Sign In</Link>
@@ -86,27 +86,28 @@ const Navebar = () => {
         
         </motion.div>
       </div>
-      <div className={`${menu ? "translate-x-0":"-translate-x-full"} bg-light absolute z-10 w-full flex flex-col items-center pt-16 gap-10 pb-5 transition-transform duration-300 ease-in-out`}>
+      {/* mobile navebare */}
+      <div className={`${menu ? "translate-x-0" : "-translate-x-full"} bg-light absolute lg:hidden z-10 w-full flex flex-col items-center pt-16 gap-10 pb-5 transition-transform duration-300 ease-in-out`}>
           <Link to="home" spy={true} smooth={true} duration={500} className="nav-link group" onClick={closeMenu}>
               Home
-               <span className="hover-link"></span>
+               <span className="hover-spane-link"></span>
            </Link>
             
             <Link to="services" spy={true} smooth={true} duration={500} className="nav-link group" onClick={closeMenu}>
               Services
-              <span className="hover-link"></span>
+              <span className="hover-spane-link"></span>
             </Link>
             <Link to="education" spy={true} smooth={true} duration={500} className="nav-link group" onClick={closeMenu}>
               Education
-              <span className="hover-link"></span>
+              <span className="hover-spane-link"></span>
             </Link>
             <Link to="subscribe" spy={true} smooth={true} duration={500} className="nav-link group" onClick={closeMenu}>
               Subscribe
-              <span className="hover-link"></span>
+              <span className="hover-spane-link"></span>
             </Link>
             <Link to="community" spy={true} smooth={true} duration={500} className="nav-link group" onClick={closeMenu}>
               Contact Us
-              <span className="hover-link"></span>
+              <span className="hover-spane-link"></span>
             </Link>
             <button className="btn">Sign In</button>
       </div>
